@@ -1,0 +1,21 @@
+/* layout page nav*/
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:16px 26px ;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand{
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
