@@ -4,6 +4,8 @@ import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router'
 import './index.css'
 import './nav.css'
+
+import { InventoryProvider } from './context/InventoryContext' 
 // import App from './App.tsx'
 import Home from './pages/Home.tsx'
 import Inventory from './pages/Inventory.tsx'
@@ -30,15 +32,10 @@ const router= createBrowserRouter([{
 const root = document.getElementById ('root')!
  ReactDom.createRoot(root).render(
   <StrictMode>
+    <InventoryProvider>
     <RouterProvider  router={router}/>
+    </InventoryProvider>
   </StrictMode>
  )
 
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <ProductDetail/>
-//     <Alerts/>
-//     <Inventory/>
-//     {/* <App /> */}
-//   </StrictMode>,
-// )
+

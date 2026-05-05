@@ -13,8 +13,7 @@ export default function Nave () {
                 
                 <div className="nav-links">
                     <NavLink to="/" end>Home</NavLink>
-                    <NavLink to="/productdetail:id" >product-Details</NavLink>
-                    <NavLink to="/alerts">Alerts</NavLink>
+                   <NavLink to="/alerts">Alerts</NavLink>
                     <NavLink to="/inventory">Inventory</NavLink>
                     
                 </div>

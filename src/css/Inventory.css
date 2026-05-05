@@ -1,4 +1,4 @@
-.tarjeta-producto {
+.product-card {
     display: flex; /* Para que los elementos internos sigan el flujo flex */
     flex-direction: column;
     align-items: center;
@@ -11,7 +11,7 @@
 }
 /* Móvil: uno debajo del otro (max-width: 768px) */
 @media (max-width: 768px) {
-  .tarjeta-producto {
+  .product-card {
     width: 90%;
   }
 }
