@@ -4,6 +4,7 @@ import { RouterProvider } from 'react-router-dom'
 import { createBrowserRouter } from 'react-router'
 import './index.css'
 import './nav.css'
+import'./css/Home.css'
 
 import { InventoryProvider } from './context/InventoryContext' 
 // import App from './App.tsx'

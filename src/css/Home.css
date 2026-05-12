@@ -1,0 +1,116 @@
+/* Home.css */
+
+.home-container {
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+/* Sección Superior */
+.top-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-items: stretch;
+}
+
+.search-box, .preview-box {
+    flex: 1;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.preview-box {
+    padding: 20px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Clase dinámica para cuando hay un producto encontrado */
+.preview-box.active {
+    border: 2px solid #ba1a3d;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Vista previa del producto */
+.product-preview {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.preview-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.preview-info {
+    text-align: left;
+}
+
+.link-detail {
+    color: #ba1a3d;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+
+/* Sección Inferior (Estadísticas) */
+.stats-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-link {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s; /* Efecto suave al pasar el mouse */
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+/* Colores de las barras de estadísticas */
+.total-box { border-top: 5px solid #3498db; }
+.low-stock-box { border-top: 5px solid #f39c12; }
+.out-stock-box { border-top: 5px solid #e74c3c; }

@@ -1,14 +1,87 @@
+.inventory-container {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.inventory-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    /* Crea columnas automáticas de mínimo 250px */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    justify-content: center;
+}
+
+.product-title-link {
+    text-decoration: none;
+    color: #2c3e50;
+    transition: color 0.2s;
+}
+
+.product-title-link:hover {
+    color: #ba1a3d;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #2ecc71;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.product-description {
+    font-size: 0.85rem;
+    color: #666;
+    min-height: 40px; /* Limita el texto para que las cajas sean parejas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+}
+
+.stock-tag {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+
+.sell-button {
+    background-color: #ba1a3d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    margin-top: auto; /* Empuja el botón siempre al fondo de la tarjeta */
+}
+
+.sell-button:hover {
+    background-color: #961531;
+}
+
+
 .product-card {
     display: flex; /* Para que los elementos internos sigan el flujo flex */
     flex-direction: column;
     align-items: center;
     gap: 15px;
     text-align: left;
-    width: 30%; /* Ancho para escritorio */
+    width: 100%; /* Ancho para escritorio */
     border: 1px solid rgb(60, 59, 59);
     padding: 10px;
     box-sizing: border-box; /* Evita que el padding ensanche la caja */
+    
+     border-radius: 8px;
 }
+
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
 /* Móvil: uno debajo del otro (max-width: 768px) */
 @media (max-width: 768px) {
   .product-card {

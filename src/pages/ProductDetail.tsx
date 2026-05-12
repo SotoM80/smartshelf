@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useContext } from "react"; // 1. Cambiamos useState/useEffect por useContext
+import { useContext } from "react"; // 1. Cambiando useState/useEffect por useContext
 import { InventoryContext } from "../context/InventoryContext"; // Importamos el cerebro
 import { Link } from "react-router-dom";
 
 export default function ProductDetail() {
     const { id } = useParams<{ id: string }>();
     
-    // 2. Consumimos los datos globales (ya no necesitamos fetch local)
+    // 2. se consumen los datos globales (ya no de necesita fetch local)
     const context = useContext(InventoryContext);
     
     // Seguridad por si el contexto falla
@@ -14,7 +14,7 @@ export default function ProductDetail() {
 
     const { products, sellProduct } = context;
 
-    // 3. Buscamos el producto en la lista global usando el ID de la URL
+    // 3. buscando el producto en la lista global usando el ID de la URL
     const item = products.find((p) => p.id === Number(id));
 
     // 4. Si el producto aún no carga o no existe
@@ -35,7 +35,7 @@ export default function ProductDetail() {
                         ${item.price}
                     </p>
 
-                    {/* 5. STOCK CON COLOR DINÁMICO */}
+                    {/* 5. SE LE  AGREGA A STOCK  COLOR DINÁMICO PARA DIFERENCIAR */}
                     <p style={{ 
                         fontSize: '1.2rem', 
                         fontWeight: 'bold',
@@ -47,7 +47,7 @@ export default function ProductDetail() {
 
                     <p>{item.description}</p>
 
-                    {/* 6. BOTÓN DE VENTA (Sincronizado con toda la app) */}
+                    {/* 6. BOTÓN DE VENTA  */}
                     <button 
                         onClick={() => sellProduct(item.id)}
                         style={{
