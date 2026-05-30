@@ -4,18 +4,51 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:16px 26px ;
+  padding:16px 25px ;
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid var(--border);
+  
 }
 
 .nav-brand{
+  max-width: 200px;
   font-weight: 600;
   font-size: 18px;
   color: var(--text-h);
+  float: left;
 }
 
 .nav-links {
   display: flex;
   gap: 24px;
+ 
+  
+}
+
+.nav-links a {
+  color: #cc6666;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: 700;
+  font-variant: small-caps;
+ 
+  }
+
+  .nav-links a:hover {
+  color: #51b363;
+  
+ 
+  }
+
+  @media (max-width: 600px) {
+  .nav {
+    flex-direction: column;   /* Empuja los botones hacia abajo del logo */
+    gap: 15px;               /* Añade separación vertical entre logo y botones */
+    text-align: center;       /* Centra los textos en pantallas pequeñas */
+  }
+
+  .nav-links {
+    justify-content: center; /* Centra los botones horizontalmente */
+    width: 100%;
+  }
 }

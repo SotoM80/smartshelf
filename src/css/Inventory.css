@@ -8,7 +8,7 @@
     list-style: none;
     padding: 0;
     display: grid;
-    /* Crea columnas automáticas de mínimo 250px */
+    /* Crea columnas automáticas de mínimo 280px */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
@@ -80,6 +80,59 @@
 .product-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.search-bar-container {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.inventory-search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.inventory-search-input:focus {
+    border-color: #ba1a3d;
+}
+
+.results-count {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Spinner de Carga */
+.loading-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ba1a3d; /* El color de tu marca */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* Móvil: uno debajo del otro (max-width: 768px) */

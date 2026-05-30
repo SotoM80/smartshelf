@@ -13,6 +13,7 @@ import Inventory from './pages/Inventory.tsx'
 import Alerts from './pages/Alerts.tsx'
 import ProductDetail from './pages/ProductDetail.tsx'
 import Nave from './components/Nav.tsx'
+
 import './css/Inventory.css'
 
 

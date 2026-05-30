@@ -1,0 +1,40 @@
+
+.error-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff5f5; /* Fondo rojo claro */
+    border: 1px solid #feb2b2; /* Borde rojo */
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-family: sans-serif;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-title {
+    color: #c53030;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.error-text {
+    color: #742a2a;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.retry-button {
+    background-color: #c53030;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+    background-color: #9b2c2c;
+}

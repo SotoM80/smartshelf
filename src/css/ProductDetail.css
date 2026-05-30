@@ -1,0 +1,124 @@
+.detail-container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #ba1a3d;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.back-link:hover {
+    transform: translateX(-5px); /* Efecto sutil de flecha moviéndose */
+}
+
+/* Caja principal del producto */
+.product-detail-card {
+    display: flex;
+    gap: 30px;
+    background-color: #ffffff; 
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    align-items: center;
+}
+
+.product-detail-image {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.product-detail-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-detail-info h1 {
+    margin: 0;
+    color: #2c3e50; 
+    font-size: 2rem;
+}
+
+.detail-price {
+    font-size: 1.8rem;
+    color: #2ecc71; 
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail-id {
+    font-size: 0.9rem;
+    color: #718096; 
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail-stock {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.detail-description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Botón de venta estilizado */
+.detail-sell-btn {
+    background-color: #ba1a3d; 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    width: fit-content;
+}
+
+.detail-sell-btn:hover {
+    background-color: #961531;
+}
+
+.detail-sell-btn:active {
+    transform: scale(0.98);
+    background-color: #718096;
+}
+
+.detail-sell-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 768px) {
+    .product-detail-card {
+        flex-direction: column; 
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .product-detail-image {
+        width: 100%; /* La imagen se expande al ancho completo del celular */
+        max-width: 350px;
+    }
+
+    .product-detail-info h1 {
+        font-size: 1.5rem; /* Achica el título en pantallas pequeñas */
+    }
+}

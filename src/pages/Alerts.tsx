@@ -2,11 +2,14 @@ import { useContext } from "react";
 // Importando el  context de inventorycontext
 import { InventoryContext } from "../context/InventoryContext"; 
 import { Link } from "react-router-dom";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 
 
 export default function Alerts() {
     const context = useContext(InventoryContext);
+
+    useDocumentTitle("Alerts");
 
     if (!context) return <p>Context Error</p>;
 

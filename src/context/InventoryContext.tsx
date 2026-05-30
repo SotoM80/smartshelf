@@ -1,14 +1,14 @@
-// src/context/InventoryContext.tsx
+
 import { type ReactNode } from "react";
 import { createContext, useState, useEffect } from "react";
 import { type Product, type InventoryContextType } from "../types";
 
-// 1. Create the context / Crea el contexto
+// 1. Create the context 
 const InventoryContext = createContext<InventoryContextType | undefined>(undefined);
 
-// 2. The Provider component / El componente proveedor
+// 2. The Provider component 
 export const InventoryProvider = ({ children }: { children: ReactNode }) => {
-  const [products, setProducts] = useState<Product[]>([]); // Global products list / Lista global de productos
+  const [products, setProducts] = useState<Product[]>([]); // Global products list 
   const [loading, setLoading] = useState(true);            // Loading state / Estado de carga
   const [error, setError] = useState<string | null>(null); // Error state / Estado de error
 
@@ -50,7 +50,7 @@ export const InventoryProvider = ({ children }: { children: ReactNode }) => {
     initInventory();
   }, []); // Se ejecuta una vez al montar
 
-  // 4. EFFECT: Auto-save on changes / Auto-guardado al detectar cambios
+  //  EFFECT: Auto-save on changes / Auto-guardado al detectar cambios
   // Runs every time the 'products' state updates / Se ejecuta cada vez que el stock cambia
   useEffect(() => {
     if (products.length > 0) {

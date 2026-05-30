@@ -6,6 +6,7 @@ export interface Product {
     stock: number;
     thumbnail:string;
     minLimit:number;
+    category:string;
 }
 
 

@@ -1,15 +1,17 @@
-//import logo from '../assets/logo.png'
+
 import { NavLink, Outlet } from "react-router";
+import smartshelflogo from "../assets/smartshelflogo.png"
+import Footer from "./Footer";
 
 export default function Nave () {
     return (
           <div>
             <nav className="nav">
                 
-                {/* <NavLink to="/" end>
+                 <NavLink to="/" end>
                 <span className="nav-brand">
-                    <img src={logo} className="base" width="50%"  alt="" /></span>
-                </NavLink> */}
+                    <img src={smartshelflogo} className="base" width="90%"  alt="" /></span>
+                </NavLink> 
                 
                 <div className="nav-links">
                     <NavLink to="/" end>Home</NavLink>
@@ -22,6 +24,7 @@ export default function Nave () {
             <main className="main">
                 <Outlet/>
             </main>
+            <Footer/>
         </div>
     )
 }
